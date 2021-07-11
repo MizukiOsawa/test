@@ -3,13 +3,17 @@
   .container {
     max-width: 1000px;
   }
+  
+    body {
+    width: 100%;
+  }
 
 }
 
 @media screen and (max-width: 670px) {
 
   body {
-    width: 670px;
+    width: 100%;
   }
 
   .header-wrapper {

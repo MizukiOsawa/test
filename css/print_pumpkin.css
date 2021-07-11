@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+}
+
+body {
+  width: 1280px;
+}
+
+.box {
+  width: 1280px;
+  height: 905px;
+  background-image: url(../image/print/coloring_1.png);
+  background-size: cover;
+}
+.printImg {
+  display: none;
+}
+
+@media print {
+    .box {
+        display: none;
+    }
+    .printImg {
+        display: block;
+        position: fixed;
+        top:0;
+        width: 100%;
+    }
+    .printImg img {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+}

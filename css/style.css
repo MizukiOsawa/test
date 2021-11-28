@@ -17,7 +17,7 @@ body, a, h3, h4{
 }
 
 .container {
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 56px;
   overflow: hidden;
@@ -73,24 +73,24 @@ body, a, h3, h4{
 header {
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
   z-index: 100;
 }
 
 .header-wrapper {
-  width: 1280px;
   background-color: white;
   box-shadow: 0px 3px 6px #00000029;
-  height: 70px;
+  height: 5.46vw;
 }
 
 .logo-header {
-  line-height: 70px;
+  line-height: 5.46vw;
 }
 
 .logo-header img{
   margin-left: 27px;
-  height: 28.5px;
+  height: 2.2vw;
   vertical-align: middle;
 }
 
@@ -101,7 +101,6 @@ nav {
 
 ul {
  margin: 0 auto;
- display: flex;
 }
 
 li {
@@ -109,13 +108,13 @@ li {
 }
 
 .search {
-  line-height: 70px;
+  line-height: 5.46vw;
   margin-right: 100px;
 }
 
 .search input {
-  width: 420px;
-  height: 40px;
+  width: 32.8vw;
+  height: 3.1vw;
   background-color: #FFE8CE;
   border-radius: 8px;
   border: 1px solid #BFB697;
@@ -152,8 +151,8 @@ li {
   display: inline-block;
   text-align: center;
   color: #707070;
-  margin-right: 16px;
-  padding-top: 12px;
+  margin-right: 1.25vw;
+  padding-top: 0.93vw;
 }
 
 .sign-in {
@@ -179,14 +178,13 @@ li {
 }
 
 .link i {
-  font-size: 1.8em;
+  font-size: 2.25vw;
 }
 
 
 .link-text  {
   font-size: 10px;
   letter-spacing: 0.36px;
-  margin-top: 2px;
 }
 
 .grey-link {
@@ -196,8 +194,8 @@ li {
 
 .cart {
   background-color:#F9AE5B;
-  width: 100px;
-  height: 70px;
+  width: 7.8vw;
+  height: 5.46vw;
   position: relative;
   padding: 0;
   margin: 0;
@@ -213,17 +211,19 @@ li {
 
 .cart-link p {
   position: absolute;
-  top: 48px;
-  left: 36px;
+  top: 3.8vw;
+  left: 0;
+  right: 0;
+  margin: auto;
   font-size: 10px;
   text-align: center;
 }
 
 .cart-link i {
   position: absolute;
-  top: 10px;
-  left: 30px;
-  font-size: 2.2em;
+  top: 1vw;
+  left: 2.34vw;
+  font-size: 2.6vw;
   transform: rotate(-0.0216turn);
 }
 
@@ -235,27 +235,26 @@ li {
 .top-button {
   position: fixed;
   width: 100%;
-  top: 580px;
-  left: 1160px;
-  box-shadow: 0px 3px  #00000029;
+  top: 84%;
+  left: 92vw;
   z-index: 100;
 }
 
 
-.top {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 45px;
+.top {  
+  display: flex;
+  width: 5.6vw;
+  height: 5.6vw;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
   background: white;
+  box-shadow: 3px 3px #00000029;
 }
 
 .top i {
   color: #F9AE5B;
-  position: absolute;
-  top:5px;
-  left:20px;
-  font-size: 4em;
+  font-size: 3.8vw;
 }
 
 
@@ -300,7 +299,7 @@ li {
   position: absolute;
   top:0;
   left:0;
-  width: 1280px;
+  width: 100%;
   z-index: 90;
   /* タッチ要素を無効にする */
   pointer-events: none;
@@ -805,7 +804,7 @@ li {
 }
 
 .place1 {
-  width:1280px;
+  width:100%;
   height: 370px;
 }
 
@@ -814,7 +813,7 @@ li {
 
 .illust-shake-last {
   position: relative;
-  width: 1280px;
+  width: 100%;
   height: 860px;
 }
 
@@ -850,7 +849,7 @@ li {
 .menu-photo {
   position: absolute;
   z-index: 90;
-  width: 1280px;
+  width: 100%;
   margin-top: 1700px;
   height: 700px;
   display: none;
@@ -885,35 +884,30 @@ li {
 /* -------------------- main -------------------- */
 
 .main-wrapper {
-  width: 1280px;
+  width: 100%;
   height: 1671px;
+}
+
+
+.main-top {
+  overflow: hidden;
+}
+
+.main-top img{
+  width: 100%;
   position: relative;
+  z-index: 90;
 }
 
 
 .main-title {
   position: absolute;
-  top: 130px;
+  top: 11%;
   left: 0px;
   right: 0px;
   margin: auto;
   z-index: 95;
   width: 72%;
-}
-
-.main-top {
-  width: 1280px;
-  height: 427px;
-  position: relative;
-  overflow: hidden;
-}
-
-.main-top img{
-  width: 105%;
-  position: absolute;
-  top: -30px;
-  left: -32px;
-  z-index: 90;
 }
 
 .main-image {
@@ -923,7 +917,7 @@ li {
   right: 0;
   margin: auto;
   z-index: 85;
-  width: 1280px
+  width: 100%;
 }
 
 /* -------------------- common -------------------- */
@@ -932,7 +926,7 @@ li {
 .main-body {
   position: absolute;
   z-index: 100;
-  width: 1280px;
+  width: 100%;
 }
 
 .bg {
@@ -951,7 +945,7 @@ li {
 }
 
 .cl-PC {
-  width: 1280px;
+  width: 100%;
   display: block;
 }
 
@@ -1114,7 +1108,7 @@ li {
 }
 
 .place2 {
-  width: 1280px;
+  width: 100%;
   height: 270px;
 }
 
@@ -1359,7 +1353,7 @@ li {
 }
 
 .menu-PC {
-  width: 1280px;
+  width: 100%;
   display: block;
 }
 
@@ -1372,7 +1366,7 @@ li {
 
 
 .last-wrapper {
-  width: 1280px;
+  width: 100%;
   /* height: 730px; */
   position: relative;
   margin-top: 4px;
@@ -1381,14 +1375,14 @@ li {
 }
 
 .last-wrapper img {
-  width: 1280px;
+  width: 100%;
 }
 
  /* -------------------- footer -------------------- */
 
 .footer-wrapper {
   background-image: url("../image/footer.jpg");
-  width: 1280px;
+  width: 100%;
   height: 272px;
   position: relative;
   z-index: 30;
@@ -1434,7 +1428,7 @@ li {
 }
 
 footer {
-  width: 1280px;
+  width: 100%;
   height: 243px;
   background-color: white;
   position: relative;
@@ -1505,7 +1499,7 @@ opacity: 0.8;
 }
 
 .show-PC {
-  display: block;
+  display: flex;
 }
 
 .show-SP {

@@ -888,7 +888,7 @@ li {
 .main-wrapper {
   width: 100%;
   height:auto;
-  margin-bottom: 104%;
+  margin-bottom: 104.5%;
 }
 
 
@@ -940,14 +940,14 @@ li {
 
 .concept-text {
   text-align: center;
-  margin-top: 39px;
+  margin-top: 4vh;
   position: relative;
 }
 
 .concept-text p {
   position: absolute;
-  width: 100%;  
-  top: 3.6vh;
+  width: 100%;
+  top: 2.8vh;
   z-index: 80;
   color:#571D96;
   font-size: 20px;
@@ -976,7 +976,7 @@ li {
 
 .luncheon_photo {
   width: 82%;
-  margin-top: -20px;
+  margin-top: -2.13vh;
   padding-bottom: 90px;
 }
 
@@ -1510,40 +1510,50 @@ opacity: 0.8;
 
 }
 
+.concept-luncheon-bg img:first-child {
+   position: relative;
+    max-height: 2645.550px;
+   z-index: 9;
+  }
+
+
+
 @media only screen and (min-width: 1280px) {
 
   .concept-luncheon-bg img:first-child {
-   position: relative;
-    max-height: 2645.550px;
-   /* vhに変更(元80px) */
    left: -25.5%;
-   z-index: 9;
   }
 }
 
-@media only screen and (min-width : 1440px) and (max-width: 1919px) {
+@media only screen and (min-width : 1440px) and (max-width: 1639px) {
 
   .concept-luncheon-bg img:first-child {
-   position: relative;
-    max-height: 2645.550px;
-   /* vhに変更(元80px) */
    left: -17%;
-   z-index: 9;
   }
 }
 
+@media only screen and (min-width : 1640px) and (max-width: 1839px) {
+
+  .concept-luncheon-bg img:first-child {
+   left: -9%;
+  }
+}
+
+
+@media only screen and (min-width : 1840px) and (max-width: 1919px) {
+
+  .concept-luncheon-bg img:first-child {
+   left: -4%;
+  }
+}
 
 @media only screen and (min-width: 1920px) {
 
   .concept-luncheon-bg img:first-child {
-   position: relative;
    width: 100%;
    left: 0%;
-   z-index: 9;
   }
 }
-
-
 
 
 

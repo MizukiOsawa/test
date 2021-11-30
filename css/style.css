@@ -9,7 +9,7 @@ a {
 }
 
 body {
-  width: 100%;
+  width: 100%; 
 }
 
 body, a, h3, h4{
@@ -121,7 +121,7 @@ li {
   vertical-align: middle;
   padding-left: 10px;
   font-size: 15px;
-  font-family: "DNP shueiMGoStd",'M PLUS Rounded 1c', sans-serif ;
+  font-family: 'M PLUS Rounded 1c', sans-serif ;
 }
 
 ::placeholder {
@@ -305,6 +305,7 @@ li {
   /* タッチ要素を無効にする */
   pointer-events: none;
   overflow: hidden;
+  display: none;
 }
 
 
@@ -886,7 +887,8 @@ li {
 
 .main-wrapper {
   width: 100%;
-  height: 1671px;
+  height:auto;
+  margin-bottom: 104%;
 }
 
 
@@ -903,22 +905,12 @@ li {
 
 .main-title {
   position: absolute;
-  top: 11%;
+  top: 18%;
   left: 0px;
   right: 0px;
   margin: auto;
   z-index: 95;
   width: 72%;
-}
-
-.main-image {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 85;
-  width: 100%;
 }
 
 /* -------------------- common -------------------- */
@@ -927,37 +919,23 @@ li {
 .main-body {
   position: absolute;
   z-index: 100;
-  width: 100%;
+  width: 100vw;
 }
-
-.bg {
-  position: relative;
-  z-index: 0;
-}
-
 
 /* -------------------- concept -------------------- */
 
 .concept-luncheon-wrapper {
-  width: 100%;
+  width: 100vw;
+    /* vhに変更 */
   height: 2466px;
   position: relative;
   z-index: 80;
 }
 
-.cl-PC {
-  width: 100%;
-  display: block;
-}
-
-.cl-SP {
-  display: none;
-}
 
 .concept-title {
   position: relative;
   text-align: center;
-  padding-top: 138px;
 }
 
 .concept-text {
@@ -968,13 +946,13 @@ li {
 
 .concept-text p {
   position: absolute;
-  top: 27px;
-  left: 370px;
+  width: 100%;  
+  top: 3.6vh;
   z-index: 80;
   color:#571D96;
   font-size: 20px;
   font-weight: bold;
-  line-height: 42px;
+  line-height: 38px;
 }
 
 .concept-text img {
@@ -1081,7 +1059,7 @@ li {
 /* -------------------- menu -------------------- */
 
 .menu-wrapper {
-  width: 100%;
+  width: 100vw;
   height: 4095px;
   position: relative;
   z-index: 70;
@@ -1367,7 +1345,7 @@ li {
 
 
 .last-wrapper {
-  width: 100%;
+  width: 100vw;
   /* height: 730px; */
   position: relative;
   margin-top: 4px;
@@ -1383,7 +1361,7 @@ li {
 
 .footer-wrapper {
   background-image: url("../image/footer.jpg");
-  width: 100%;
+  width: 100vw;
   height: 272px;
   position: relative;
   z-index: 30;
@@ -1429,7 +1407,7 @@ li {
 }
 
 footer {
-  width: 100%;
+  width: 100vw;
   height: 243px;
   background-color: white;
   position: relative;
@@ -1504,6 +1482,72 @@ opacity: 0.8;
 }
 
 .show-SP {
+  display: none;
+}
+
+/* -------------------- bg -------------------- */
+
+.bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+
+.main-image {
+  position: relative;
+  margin: auto;
+  z-index: 10;
+  width: 100%;
+}
+
+.concept-luncheon-bg {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: -12.44vh;
+  text-align: center;
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+  .concept-luncheon-bg img:first-child {
+   position: relative;
+    max-height: 2645.550px;
+   /* vhに変更(元80px) */
+   left: -25.5%;
+   z-index: 9;
+  }
+}
+
+@media only screen and (max-width : 1440px) {
+
+  .concept-luncheon-bg img:first-child {
+   position: relative;
+    max-height: 2645.550px;
+   /* vhに変更(元80px) */
+   left: -17%;
+   z-index: 9;
+  }
+}
+
+
+@media only screen and (min-width: 1920px) {
+
+  .concept-luncheon-bg img:first-child {
+   position: relative;
+   width: 100%;
+   left: 0%;
+   z-index: 9;
+  }
+}
+
+
+
+
+
+.cl-SP {
   display: none;
 }
 

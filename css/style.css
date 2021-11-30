@@ -1521,7 +1521,7 @@ opacity: 0.8;
   }
 }
 
-@media only screen and (max-width : 1440px) {
+@media only screen and (min-width : 1440px) and (max-width: 1919px) {
 
   .concept-luncheon-bg img:first-child {
    position: relative;
@@ -1550,3 +1550,4 @@ opacity: 0.8;
 .cl-SP {
   display: none;
 }
+

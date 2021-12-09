@@ -9,7 +9,9 @@ a {
 }
 
 body {
-  width: 100%; 
+  width: 100%;
+  position: relative;
+  min-width: 100%;
 }
 
 body, a, h3, h4{
@@ -20,7 +22,7 @@ body, a, h3, h4{
   width: 100%;
   margin: 0 auto;
   padding: 0 56px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .fadeIn {
@@ -79,6 +81,7 @@ header {
 }
 
 .header-wrapper {
+  display: flex;
   background-color: white;
   box-shadow: 0px 3px 6px #00000029;
   height: 5.46vw;
@@ -95,12 +98,12 @@ header {
 }
 
 nav {
-  float: right;
-  margin-left: 0;
+  margin: 0 0 0 auto;
 }
 
 ul {
  margin: 0 auto;
+ display: flex;
 }
 
 li {
@@ -260,7 +263,7 @@ li {
 
 
 
-/*　上に上がる動き　*/
+/*上に上がる動き*/
 
 #header.UpMove{
 	animation: UpAnime 0.5s forwards;
@@ -277,7 +280,7 @@ li {
   }
 }
 
-/*　下に下がる動き　*/
+/*下に下がる動き*/
 
 #header.DownMove{
 	animation: DownAnime 0.2s forwards;
@@ -905,7 +908,7 @@ li {
 
 .main-title {
   position: absolute;
-  top: 18%;
+  top: 16.7vh;
   left: 0px;
   right: 0px;
   margin: auto;
@@ -975,7 +978,7 @@ li {
 }
 
 .luncheon_photo {
-  width: 80%; 
+  width: 80%;
   padding-bottom: 17vh;
 }
 
@@ -1028,8 +1031,6 @@ li {
   width: 90%;
 }
 
-
-
 .copy-button {
   display: inline-block;
   width: 257px;
@@ -1061,7 +1062,7 @@ li {
 
 .menu-wrapper {
   width: 100vw;
-  height: 4095px;
+  height: 4160px;
   position: relative;
   z-index: 70;
 }
@@ -1071,8 +1072,8 @@ li {
 }
 
 .menu-title {
-  top: 280px;
-  margin-left: 100px;
+  top: 40vh;
+  margin-left: 7.8vh;
   width: 100%;
   position: relative;
 }
@@ -1087,32 +1088,30 @@ li {
   white-space: nowrap;
 }
 
-.place2 {
-  width: 100%;
-  height: 270px;
-}
-
 .menu {
   position: relative;
-  top: 280px;
+  top: 280px; 
 }
 
 .about {
   color: #6E2F29;
   text-align: center;
-  z-index: 60px;
+}
+
+.about > .show-PC {
+  display: block;
 }
 
 .about h3 {
   font-size: 32px;
   line-height: 48px;
   letter-spacing: 2px;
-  font-family:  "DNP shueiMGoStd",'M PLUS Rounded 1c', sans-serif;
+  font-family:  'M PLUS Rounded 1c', sans-serif;
 }
 
 .about h4 {
   font-size: 25px;
-  padding-bottom: 10px;
+  padding-bottom: 2vh;
 }
 
 
@@ -1120,41 +1119,33 @@ li {
   font-size: 14px;
   line-height: 25px;
   font-family: 'Hiragino Maru Gothic Pro';
-  padding-bottom: 25px;
+  position: relative;
+  z-index: 10;
 }
 
-.about-odd {
-  width: 765px;
-  height: 464px;
-  background-image: url("../image/menu_bg_odd.svg");
-  background-size: contain;
-  float: right;
-  margin-top: -500px;
-  margin-right: 68px;
-  z-index: 55;
-  padding-top: 70px;
-  padding-left: 145px;
+.about-text > p {
+  position: relative;
+  padding-bottom: 2vh;
 }
 
-.about-juice {
-  margin-top: -600px;
-  margin-right: 78px;
-  padding-top: 82px;
+.about-odd img {
+ width: 765px;
+ height: 427px;
+ position: absolute;
+ z-index: -10;
 }
 
 .about-even {
-  width: 776px;
-  height: 432px;
-  background-image: url("../image/menu_bg_even.svg");
-  background-size: contain;
-  float: left;
-  margin-top: -478px;
-  margin-left: 77px;
-  z-index: 40;
-  padding-top: 70px;
-  padding-right: 250px;
+  position: relative;
 }
 
+.about-even img {
+  width: 765px;
+  height: 464px;
+  position: absolute;
+  z-index: -10;
+
+}
 
 .detail {
   display: inline-block;
@@ -1176,135 +1167,200 @@ li {
 }
 
 .millefeuille {
-  display: inline-block;
-  margin-bottom: 240px;
+  display: flex;
+  justify-content: center;
   position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  margin-top: 30vh;
 }
 
-.millefeuille img:first-child {
+.millefeuille-img {
+  position: relative;
+  z-index: 20;
+}
+
+
+.millefeuille-img :first-child {
   position: absolute;
   top: -120px;
-  left: 80px;
 }
 
-.millefeuille img:nth-child(2) {
-  float: left;
+.millefeuille-img :nth-child(2) {
   position: relative;
   transform: rotate(-0.0243turn);
   top: -40px;
-  left: 25px;
+}
+
+.millefeuille > .about-odd img{
+  left: 30%;
+  top: -20%;
 }
 
 .kidsPlate {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   position: relative;
-  margin-bottom: 100px;
+  transform: translateX(-50%);
+  left: 50%;
+  margin-top: 30vh;
 }
 
-.kidsPlate img:first-child {
+.kidsPlate-img :first-child {
   position: absolute;
   top: -127px;
-  right: 65px;
+  right: 6vw;
 }
 
-.kidsPlate img:nth-child(2){
-  float: right;
+
+
+.kidsPlate-img :nth-child(2){
   position: relative;
   transform: rotate(0.0216turn);
   top: -40px;
-  right: 30px;
+  right: -54vh;
 }
 
+.kidsPlate > .about-even {
+  right: 46.5%;
+}
+
+.kidsPlate > .about-even .about-text  {
+  top: 2%;
+}
+
+.kidsPlate > .about-even img{
+  left: -20%;
+  top: -25%;
+}
 .plate {
-  display: inline-block;
-  margin-bottom: 270px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  margin-top: 30vh;
 }
 
-.plate img:first-child{
+.plate-img :first-child{
   position: absolute;
   top: -95px;
-  left: 80px;
 }
 
-.plate img:nth-child(2) {
-  float: left;
-  position: relative;
+.plate-img :nth-child(2) {
+  position:relative;
   transform: rotate(-0.0108turn);
   top: -24px;
-  left: 20px;
+}
+
+.plate > .about-odd .about-text  {
+  top: 23%;
+}
+
+.plate > .about-odd img{
+  left: 32%;
+  top: 8%;
 }
 
 .pizza {
-  display: inline-block;
-  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  margin-top: 30vh;
 }
 
-.pizza img:first-child {
+.pizza-img :first-child {
   position: absolute;
-  top: -120px;
-  right: 80px;
+  top: -14vh;
+  right: 6.25vw;
 }
 
-
-.pizza img:nth-child(2) {
-  float: right;
+.pizza-img :nth-child(2) {
   position: relative;
   transform: rotate(0.0243turn);
   top: -47px;
-  right: 20px;
+  left: 340px;
+}
+
+.pizza > .about-even {
+  right: 50%;
+}
+
+.pizza > .about-even .about-text  {
+  top: 0;
+}
+
+.pizza > .about-even img{
+  left: -20%;
+  top: -28%;
 }
 
 .juice {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  margin-top: 22vh;
 }
 
-.juice img:first-child {
+.juice {
+  padding-right: 20px;
+}
+
+.juice-img :first-child {
   position: absolute;
-  top: 37px;
-  left: 353px;
+  top: -109px;
+  left: 26vw;
 }
 
-.juice img:nth-child(2) {
-  float: left;
+.juice-img :nth-child(2) {
   position: relative;
   transform: rotate(-0.0621turn);
-  top: -62px;
-  left: 138px;
+  top: -180px;
+  right: -190px;
+}
+
+.juice > .about-odd .about-text  {
+  top: 20%;
+}
+
+.juice > .about-odd img{
+  position: relative;
+  left: -9%;
+  top: -25%;
 }
 
 .buy-button {
-  height: 480px;
-  display: inline-block;
-  margin-top: -40px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  height: 186px;
+  margin-top: -17vh;
 }
 
-.buy {
-  position: absolute;
-  text-align: center;
-  width: 90%;
-  left: 50px;
-
+.buy-front {
+  position: relative;
+  z-index: 45;
+  width: 100%;
 }
 
 .buy-front p{
+  position: absolute;
   color: white;
   font-size: 38px;
   font-weight: bold;
   letter-spacing: 1.5px;
-  position: absolute;
-  top: 60px;
-  left: 380px;
+  line-height: 236px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 50;
 }
 
 .buy-front img {
-  position: absolute;
-  width: 64%;
-  top: -27px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  width: 673px;
   z-index: 45;
 }
 
@@ -1313,59 +1369,35 @@ li {
 }
 
 .buy-front:active{
-  position: absolute;
-  top: 18px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  top: 14px;
+
 }
 
 .shadow {
-  display: inline-block;
-  width: 669px;
+  position: relative;
+  top: -120px;
+  width: 660px;
   height: 128px;
   border-radius: 35px;
   background-color: #000000;
   opacity: 0.35;
-  margin-top: 50px;
-  margin-left: 5px;
-  z-index: 40;
+  z-index: -10;
+  margin: 0 auto;
 }
-
-.menu-PC {
-  width: 100%;
-  display: block;
-}
-
-.menu-SP {
-  display: none;
-}
-
-/* -------------------- last -------------------- */
-
-
 
 .last-wrapper {
-  width: 100vw;
-  /* height: 730px; */
-  position: relative;
-  margin-top: 4px;
-  z-index: 20;
-  font-size: 0;
+  height: 630px;
 }
 
-.last-wrapper img {
-  width: 100%;
-}
 
  /* -------------------- footer -------------------- */
 
 .footer-wrapper {
-  background-image: url("../image/footer.jpg");
+  background-image: url("../image/footer.png");
   width: 100vw;
-  height: 272px;
+  height: 273px;
   position: relative;
-  z-index: 30;
+  z-index: 80;
   color: white;
   text-align: center;
   overflow: hidden;
@@ -1413,7 +1445,7 @@ footer {
   background-color: white;
   position: relative;
   top: 0px;
-  z-index: 90;
+  z-index: 5;
 }
 
 .footer-under {
@@ -1478,10 +1510,6 @@ opacity: 0.8;
   letter-spacing: 1px;
 }
 
-.show-PC {
-  display: flex;
-}
-
 .show-SP {
   display: none;
 }
@@ -1491,7 +1519,7 @@ opacity: 0.8;
 .bg {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 100vw;
 }
 
 
@@ -1503,65 +1531,204 @@ opacity: 0.8;
 }
 
 .concept-luncheon-bg {
-  width: 100%;
-  overflow: hidden;
   position: relative;
   top: -12.44vh;
   text-align: center;
-
+  z-index: 9;
 }
 
 .concept-luncheon-bg img:first-child {
-   position: relative;
-    max-height: 2645.550px;
-   z-index: 9;
+  position: relative;
+  max-width: 1920px;
+  transform: translateX(-50%);
+  left: 50%;
   }
 
+.menu-bg {
+  position: relative;
+  top: -40vh;
+  text-align: center;
+  z-index: 8;
+}
 
+.menu-PC {
+  position: relative;
+  max-width: 1920px;
+  transform: translateX(-50%);
+  left: 50%;
+}
 
-@media only screen and (min-width: 1280px) {
+.menu-SP {
+  display: none;
+}
 
-  .concept-luncheon-bg img:first-child {
-   left: -25.5%;
-  }
+.last-bg {
+  margin-top: -65vh;
+  z-index: 7;
+}
+
+.last-bg img {
+  width: 100vw;
 }
 
 @media only screen and (min-width : 1440px) and (max-width: 1639px) {
 
-  .concept-luncheon-bg img:first-child {
-   left: -17%;
-  }
   .luncheon-wrapper {
     margin-top: 46vh;
 }
 
   .luncheon_photo {
-  padding-bottom: 12vh;
+    padding-bottom: 12vh;
+}
+
+.menu-wrapper {
+  height: 4130px;
+}
+
+.menu-title {
+  top: 30vh;
+}
+
+.millefeuille {
+  margin-top: 25vh;
+}
+
+.millefeuille > .about-odd img {
+  left: 32%;
+  top: -20%;
+}
+.kidsPlate > .about-even {
+    right: 39%;
+}
+
+.kidsPlate-img :first-child {
+    right: 8vw;
 }
 
 
+.pizza > .about-even {
+    right: 39%;
 }
+
+.pizza-img :nth-child(2) {
+    left: 391px;
+}
+
+.juice > .about-odd img {
+ left: -3%;
+}
+
+.kidsPlate {
+  margin-top: 25vh;
+}
+
+.last-wrapper {
+  height: 700px;
+}
+
+.footer-wrapper {
+    height: 295px;
+}
+
+}
+
+
 
 @media only screen and (min-width : 1640px) and (max-width: 1839px) {
 
-  .concept-luncheon-bg img:first-child {
-   left: -9%;
-  }
-  .luncheon_photo {
+ .luncheon_photo {
   width: 75%;
   padding-bottom: 5vh;
 }
   .luncheon-wrapper {
-    margin-top: 40vh;
+    margin-top: 36vh;
 }
+
+.menu-wrapper {
+  height: 4090px;
+}
+
+.menu-title {
+  top: 30vh;
+}
+
+.millefeuille {
+  margin-top: 17vh;
+}
+
+.millefeuille > .about-odd img {
+  left: 36%;
+  top: -20%;
+}
+
+.kidsPlate > .about-even {
+  right: 31%;
+}
+
+.plate > .about-odd img {
+  left:  36.5%;
+}
+
+.pizza > .about-even {
+  right: 36%;
+}
+
+.pizza-img :first-child {
+  right: 12vw;
+}
+
+.pizza-img :nth-child(2) {
+  left: 391px;
+}
+
+.juice > .about-odd img {
+ left: -1%;
+}
+
+.juice > .about-odd .about-text {
+  left: 0;
+}
+
+.juice-img :first-child {
+  left: 35vw;
+  top: -60px;
+}
+
+.juice-img :nth-child(2) {
+  top: -180px;
+}
+
+.kidsPlate {
+  margin-top: 20vh;
+}
+
+.kidsPlate-img :first-child {
+    right: 10vw;
+}
+
+.plate {
+  margin-top: 25vh;
+}
+.pizza {
+  margin-top: 20vh;
+}
+
+.buy-button {
+  margin-top: -20vh;
+}
+
+.last-wrapper {
+  height: 700px;
+}
+
+.footer-wrapper {
+    height: 315px;
+}
+
 }
 
 @media only screen and (min-width : 1840px) and (max-width: 1919px) {
-
-  .concept-luncheon-bg img:first-child {
-   left: -3%;
-  }
-    .luncheon-wrapper {
+  .luncheon-wrapper {
     margin-top: 30vh;
   }
   .luncheon_photo {
@@ -1572,31 +1739,190 @@ opacity: 0.8;
   width: 64%;
 }
 
+.about-odd img {
+ left: 39%;
 }
 
-@media only screen and (min-width: 1920px) {
+.menu-wrapper {
+  height: 4040px;
+}
 
-    .luncheon-wrapper {
-    margin-top: 23vh;
+
+.millefeuille > .about-odd img {
+  left: 37%;
+}
+
+.menu-title {
+  top: 17vh;
+}
+
+.millefeuille {
+  margin-top: 12vh;
+}
+
+.kidsPlate {
+  margin-top: 20vh;
+}
+
+.kidsPlate > .about-even {
+    right: 30.5%;
+}
+
+.kidsPlate-img :nth-child(2){
+  right: -21vw;
+}
+
+.kidsPlate-img :first-child {
+    right: 15vw;
+}
+
+.plate {
+  margin-top: 19vh;
+}
+
+.plate > .about-odd img {
+  left: 38%;
+}
+
+.pizza {
+  margin-top: 24vh;
+}
+
+.pizza-img :nth-child(2) {
+    left: 420px;
+}
+
+.pizza > .about-even {
+    right: 30%;
+}
+
+.pizza-img :first-child {
+  right: 15.25vw;
+}
+
+.juice {
+  margin-top: 12vh;
+}
+
+.juice-img :first-child {
+    top: -60px;
+    left: 38vw;
+}
+
+.juice > .about-odd img {
+    left: 3%;
+}
+
+.last-wrapper {
+    height: 870px;
+}
+
+.footer-wrapper {
+    height: 345px;
+}
+
+}
+
+@media only screen and (min-width : 1920px) and (max-width: 3000px){
+
+  .luncheon-wrapper {
+  margin-top: 27vh;
   }
 
-  .concept-luncheon-bg img:first-child {
-   width: 100%;
-   left: 0%;
-  }
   .luncheon_photo {
-  width: 65%;
+  width: 58%;
   padding-bottom: 4vh;
   }
   .coloring {
   width: 64%;
 }
 
+.menu-title {
+  top: 12vh;
+}
+
+.menu-wrapper {
+  height: 4010px;
 }
 
 
+.about-odd img {
+ left: 39%;
+}
+
+
+.millefeuille {
+    margin-top: 5vh;
+}
+
+.millefeuille > .about-odd img {
+  left: 38%;
+}
+
+.kidsPlate {
+  margin-top: 24vh;
+}
+
+.kidsPlate > .about-even {
+  right: 29.5%;
+}
+
+.kidsPlate-img :first-child {
+  right: 16vw;
+}
+
+.kidsPlate-img :nth-child(2) {
+  right: -40.5vh;
+}
+
+.plate > .about-odd img {
+    left: 39%;
+    top: 8%;
+}
+
+.plate {
+  margin-top: 14vh;
+}
+
+.pizza {
+  margin-top: 18vh;
+}
+
+.pizza > .about-even {
+    right: 30%;
+}
+
+.pizza-img :first-child {
+    right: 15.25vw;
+}
+
+.pizza-img :nth-child(2) {
+    left: 420px;
+}
+
+.juice {
+  margin-top: 18vh;
+}
+
+.juice > .about-odd img {
+    left: 3%;
+}
+
+.juice-img :first-child {
+  left: 35vw;
+}
+
+.last-wrapper {
+  height: 890px;
+}
+
+.footer-wrapper {
+    height: 355px;
+}
+
+
+}
 
 .cl-SP {
   display: none;
 }
-

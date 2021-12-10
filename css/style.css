@@ -1594,20 +1594,28 @@ opacity: 0.8;
 }
 
 .millefeuille > .about-odd img {
-  left: 32%;
+  left: 35%;
   top: -20%;
 }
 .kidsPlate > .about-even {
-    right: 39%;
+  right: 39%;
 }
 
 .kidsPlate-img :first-child {
-    right: 8vw;
+  right: 8vw;
+}
+
+.plate {
+  margin-top: 30vh;
+}
+
+.pizza {
+  margin-top: 24vh;
 }
 
 
 .pizza > .about-even {
-    right: 39%;
+    right: 40%;
 }
 
 .pizza-img :nth-child(2) {

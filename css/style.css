@@ -1313,7 +1313,7 @@ li {
 .juice-img :first-child {
   position: absolute;
   top: -60px;
-  left: 32vw;
+  left: 30vw;
 }
 
 .juice-img :nth-child(2) {
@@ -1626,6 +1626,10 @@ opacity: 0.8;
  left: -3%;
 }
 
+.juice-img :first-child {
+  left: 32vw;
+}
+
 .kidsPlate {
   margin-top: 25vh;
 }
@@ -1699,7 +1703,6 @@ opacity: 0.8;
 
 .juice-img :first-child {
   left: 35vw;
-  top: -60px;
 }
 
 .juice-img :nth-child(2) {
@@ -1813,7 +1816,6 @@ opacity: 0.8;
 }
 
 .juice-img :first-child {
-    top: -60px;
     left: 38vw;
 }
 
@@ -1917,7 +1919,7 @@ opacity: 0.8;
 }
 
 .juice-img :first-child {
-  left: 35vw;
+  left: 40vw;
 }
 
 .last-wrapper {

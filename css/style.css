@@ -1571,7 +1571,7 @@ opacity: 0.8;
   width: 100vw;
 }
 
-@media only screen and (min-width : 1440px) and (max-width: 1639px) {
+@media only screen and (min-width : 1420px) and (max-width: 1639px) {
 
   .luncheon-wrapper {
     margin-top: 46vh;
